@@ -23,9 +23,9 @@ img {
   --header-height: 4.5rem;
 
   /* colors */
-  --hue: 159;
+  --hue:202;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color: hsl(var(--hue) 100% 61%);
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
@@ -51,6 +51,10 @@ body {
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
 }
 
 .title {
@@ -145,6 +149,10 @@ body {
 .logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
+}
+
+.logo span:nth-child(1) {
+  color: hsl(82, 90%, 35%);
 }
 
 .logo span {
@@ -274,15 +282,20 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color-second);
+  background: var(--base-color);
   position: absolute;
   top: -16.8%;
   left: 16.7%;
   z-index: 0;
 }
 
+#home .image {
+  max-width: 497px;
+}
+
 #home .image img {
   position: relative;
+  width: 26.4rem;
   right: 2.93rem;
 }
 
@@ -316,13 +329,14 @@ nav.show div.icon-close {
 
 #about .image {
   position: relative;
+  max-width: 460px;
 }
 
 #about .image::before {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--base-color-second);
+  background: var(--base-color);
   position: absolute;
   top: -8.3%;
   left: -33%;
@@ -331,6 +345,7 @@ nav.show div.icon-close {
 
 #about .image img {
   position: relative;
+  width: 100%;
 }
 
 #about .image img,
